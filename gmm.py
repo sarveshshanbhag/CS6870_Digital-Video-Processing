@@ -193,10 +193,10 @@ def plot_metrics(frame_numbers, metrics,save_path):
     print(f"Average Accuracy: {avg_accuracy:.4f}")
 
 if __name__=='__main__':
-    # gmm_model=GMM(K=5,T=0.6,decay_rate=0.7,height=480,width=720)
+    gmm_model=GMM(K=5,T=0.6,decay_rate=0.7,height=480,width=720)
     frames_folder=r"C:\Users\91983\Downloads\ChangeDetection\ChangeDetection\pedestrians\input"
     prediction_folder=r"C:\Users\91983\Downloads\ChangeDetection\ChangeDetection\pedestrians\output"
     ground_truth_folder=r"C:\Users\91983\Downloads\ChangeDetection\ChangeDetection\pedestrians\groundtruth"
-    # gmm_model.output(frames_folder,prediction_folder)
+    gmm_model.output(frames_folder,prediction_folder)
     frame_numbers, metrics = compare_all(ground_truth_folder, prediction_folder)
     plot_metrics(frame_numbers,metrics,prediction_folder)
